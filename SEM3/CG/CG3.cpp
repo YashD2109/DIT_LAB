@@ -156,7 +156,7 @@ int main() //main
 {
     int cl;
     int gd = DETECT, gm;
-    initgraph(&gd,&gm,"C:\\tc\\bgi");
+    initgraph(&gd,&gm,NULL);
     cleardevice();
     poly x;
     x.read();
