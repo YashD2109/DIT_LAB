@@ -17,7 +17,7 @@ def shellSort(arr):
     n=len(arr)
     gap=n//2
     while gap>0:
-        for i in range(0,n,gap):
+        for i in range(gap,n):
             temp=arr[i]
             j=i
             while(j>=gap and arr[j-gap]>temp):
