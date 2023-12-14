@@ -20,7 +20,7 @@ class deque
 
         bool isFull()
         {
-            return (rear-1)%MAX_SIZE==front;
+            return (rear+1)%MAX_SIZE==front;
         }
 
         void addFront(int value)
@@ -42,7 +42,7 @@ class deque
             else 
             {
                 if(isEmpty()) front=rear=0;
-                else rear=(rear+1+MAX_SIZE)%MAX_SIZE;
+                else rear=(rear+1)%MAX_SIZE;
             
             dequeArray[rear]=value;
             cout<<"Element "<<value<<" added at the end.\n";
@@ -67,7 +67,7 @@ class deque
             {
                 cout<<"Element "<<dequeArray[rear]<<" delete from the front.\n";
                 if(front==rear) front=rear=-1;
-                else rear=(front+1)%MAX_SIZE;
+                else rear=(rear-1+MAX_SIZE)%MAX_SIZE;
             }
         } 
 
